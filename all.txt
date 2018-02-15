@@ -1,3 +1,21 @@
+./gradlew clean jmh
+Stopping Daemon(s)
+1 Daemon stopped
+Starting a Gradle Daemon, 2 stopped Daemons could not be reused, use --status for details
+Parallel execution is an incubating feature.
+Build cache is an incubating feature.
+
+> Configure project : 
+ArtifactoryUser user: null
+Using Java from /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre (version 1.8.0_144)
+Detected development environment
+
+[buildinfo] Properties file path was not found! (Relevant only for builds running on a CI Server)
+
+> Task :performance:jmhRunBytecodeGenerator 
+Processing 23 classes from /Users/pditommaso/projects/groovy/subprojects/performance/target/classes/java/jmh with "reflection" generator
+Processing 0 classes from /Users/pditommaso/projects/groovy/subprojects/performance/target/classes/groovy/jmh with "reflection" generator
+Writing out Java source to /Users/pditommaso/projects/groovy/subprojects/performance/target/jmh-generated-sources and resources to /Users/pditommaso/projects/groovy/subprojects/performance/target/jmh-generated-classes
 
 # Warmup Iteration   1: 
 > Task :performance:jmh 
@@ -9,63 +27,1001 @@
 # Measurement: 5 iterations, 2 s each
 # Timeout: 10 min per iteration
 # Threads: 1 thread, will synchronize iterations
-# Benchmark mode: Average time, time/op
+# Benchmark mode: Throughput, ops/time
 # Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
-# Parameters: (count = 1)
+# Parameters: (size = 1)
 
-# Run progress: 0.00% complete, ETA 00:15:00
+# Run progress: 0.00% complete, ETA 00:30:00
 # Fork: 1 of 3
 
-0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op
-# Warmup Iteration   3: 0.004 ms/op
-# Warmup Iteration   4: 0.003 ms/op
-# Warmup Iteration   5: 0.004 ms/op
-Iteration   1: 0.003 ms/opING [14s]
-Iteration   2: 0.003 ms/opING [16s]
-Iteration   3: 0.004 ms/opING [18s]
-Iteration   4: 0.003 ms/opING [20s]
-Iteration   5: 0.004 ms/opING [22s]
+2192911.245 ops/ms
+# Warmup Iteration   2: 2347971.843 ops/ms
+# Warmup Iteration   3: 2300977.070 ops/ms
+# Warmup Iteration   4: 2173956.546 ops/ms
+# Warmup Iteration   5: 2067707.392 ops/ms
+Iteration   1: 2111906.726 ops/mss]
+Iteration   2: 2155027.201 ops/mss]
+Iteration   3: 2329142.535 ops/mss]
+Iteration   4: 2316547.801 ops/mss]
+Iteration   5: 2345657.230 ops/mss]
 
 > Task :performance:jmh 
 
-# Run progress: 2.22% complete, ETA 00:14:55
+# Run progress: 1.11% complete, ETA 00:30:12
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op
-# Warmup Iteration   3: 0.003 ms/op
-# Warmup Iteration   4: 0.003 ms/op
-# Warmup Iteration   5: 0.004 ms/op
-Iteration   1: 0.004 ms/opING [35s]
-Iteration   2: 0.003 ms/opING [37s]
-Iteration   3: 0.004 ms/opING [39s]
-Iteration   4: 0.004 ms/opING [41s]
-Iteration   5: 0.003 ms/opING [43s]
+# Warmup Iteration   1: 2210218.672 ops/ms
+# Warmup Iteration   2: 2299183.569 ops/ms
+# Warmup Iteration   3: 2321965.016 ops/ms
+# Warmup Iteration   4: 2194072.831 ops/ms
+# Warmup Iteration   5: 2376098.439 ops/ms
+Iteration   1: 2326415.047 ops/mss]
+Iteration   2: 2376414.170 ops/mss]
+Iteration   3: 2332720.850 ops/mss]
+Iteration   4: 2352322.667 ops/mss]
+Iteration   5: 2368547.744 ops/mss]
 
 > Task :performance:jmh 
 
-# Run progress: 4.44% complete, ETA 00:14:35
+# Run progress: 2.22% complete, ETA 00:29:50
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op
-# Warmup Iteration   3: 0.003 ms/op
-# Warmup Iteration   4: 0.003 ms/op
-# Warmup Iteration   5: 0.003 ms/op
-Iteration   1: 0.003 ms/opING [55s]
-Iteration   2: 0.003 ms/opING [57s]
-Iteration   3: 0.003 ms/opING [59s]
-Iteration   4: 0.003 ms/opING [1m 1s]
-Iteration   5: 0.003 ms/opING [1m 3s]
+# Warmup Iteration   1: 2324989.932 ops/ms
+# Warmup Iteration   2: 2268240.216 ops/ms
+# Warmup Iteration   3: 2374982.693 ops/ms
+# Warmup Iteration   4: 2357136.189 ops/ms
+# Warmup Iteration   5: 2388515.188 ops/ms
+Iteration   1: 2345669.034 ops/ms 8s]
+Iteration   2: 2356051.425 ops/ms 10s]
+Iteration   3: 2372861.093 ops/ms 12s]
+Iteration   4: 2335418.525 ops/ms 14s]
+Iteration   5: 2382918.586 ops/ms 17s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
-  0.003 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.003, 0.003, 0.004), stdev = 0.001
-  CI (99.9%): [0.003, 0.004] (assumes normal distribution)
+  2320508.042 ±(99.9%) 84277.415 ops/ms [Average]
+  (min, avg, max) = (2111906.726, 2320508.042, 2382918.586), stdev = 78833.146
+  CI (99.9%): [2236230.627, 2404785.457] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
+# Parameters: (size = 10)
+
+# Run progress: 3.33% complete, ETA 00:29:29
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2281801.174 ops/ms
+# Warmup Iteration   2: 2340569.959 ops/ms
+# Warmup Iteration   3: 2345567.990 ops/ms
+# Warmup Iteration   4: 2397673.451 ops/ms
+# Warmup Iteration   5: 2395676.576 ops/ms
+Iteration   1: 2380511.042 ops/ms 29s]
+Iteration   2: 2360275.498 ops/ms 31s]
+Iteration   3: 2235717.753 ops/ms 33s]
+Iteration   4: 2270457.223 ops/ms 35s]
+Iteration   5: 2211203.485 ops/ms 37s]
+
+> Task :performance:jmh 
+
+# Run progress: 4.44% complete, ETA 00:29:08
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2213191.698 ops/ms
+# Warmup Iteration   2: 2272350.320 ops/ms
+# Warmup Iteration   3: 2293561.320 ops/ms
+# Warmup Iteration   4: 2382918.456 ops/ms
+# Warmup Iteration   5: 2381376.357 ops/ms
+Iteration   1: 2350684.441 ops/ms 49s]
+Iteration   2: 2220665.475 ops/ms 51s]
+Iteration   3: 2373867.846 ops/ms 53s]
+Iteration   4: 2336771.734 ops/ms 55s]
+Iteration   5: 2314185.471 ops/ms 57s]
+
+> Task :performance:jmh 
+
+# Run progress: 5.56% complete, ETA 00:28:48
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2283781.804 ops/ms
+# Warmup Iteration   2: 2378623.512 ops/ms
+# Warmup Iteration   3: 2382630.873 ops/ms
+# Warmup Iteration   4: 2400714.947 ops/ms
+# Warmup Iteration   5: 2431202.252 ops/ms
+Iteration   1: 2413249.860 ops/ms 9s]
+Iteration   2: 2345940.855 ops/ms 12s]
+Iteration   3: 2361929.566 ops/ms 13s]
+Iteration   4: 2366687.806 ops/ms 15s]
+Iteration   5: 2395437.935 ops/ms 18s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
+  2329172.399 ±(99.9%) 69070.211 ops/ms [Average]
+  (min, avg, max) = (2211203.485, 2329172.399, 2413249.860), stdev = 64608.318
+  CI (99.9%): [2260102.188, 2398242.610] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
+# Parameters: (size = 100)
+
+# Run progress: 6.67% complete, ETA 00:28:28
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2383733.616 ops/ms
+# Warmup Iteration   2: 2350991.780 ops/ms
+# Warmup Iteration   3: 2254596.491 ops/ms
+# Warmup Iteration   4: 2206095.296 ops/ms
+# Warmup Iteration   5: 2254871.273 ops/ms
+Iteration   1: 2252508.946 ops/ms 30s]
+Iteration   2: 2256888.344 ops/ms 32s]
+Iteration   3: 2287449.759 ops/ms 34s]
+Iteration   4: 2287408.959 ops/ms 36s]
+Iteration   5: 2307354.034 ops/ms 38s]
+
+> Task :performance:jmh 
+
+# Run progress: 7.78% complete, ETA 00:28:07
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2274200.171 ops/ms
+# Warmup Iteration   2: 2380646.300 ops/ms
+# Warmup Iteration   3: 2383231.449 ops/ms
+# Warmup Iteration   4: 2359254.884 ops/ms
+# Warmup Iteration   5: 2377550.668 ops/ms
+Iteration   1: 2356288.956 ops/ms 50s]
+Iteration   2: 2407466.038 ops/ms 52s]
+Iteration   3: 2410706.579 ops/ms 54s]
+Iteration   4: 2420103.621 ops/ms 56s]
+Iteration   5: 2388330.343 ops/ms 58s]
+
+> Task :performance:jmh 
+
+# Run progress: 8.89% complete, ETA 00:27:47
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2370354.974 ops/ms
+# Warmup Iteration   2: 2311203.660 ops/ms
+# Warmup Iteration   3: 2393262.038 ops/ms
+# Warmup Iteration   4: 2401941.620 ops/ms
+# Warmup Iteration   5: 2400760.417 ops/ms
+Iteration   1: 2360862.605 ops/ms 10s]
+Iteration   2: 2390896.119 ops/ms 12s]
+Iteration   3: 2420104.087 ops/ms 14s]
+Iteration   4: 2404809.562 ops/ms 16s]
+Iteration   5: 2369902.263 ops/ms 18s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
+  2354738.681 ±(99.9%) 64525.890 ops/ms [Average]
+  (min, avg, max) = (2252508.946, 2354738.681, 2420104.087), stdev = 60357.558
+  CI (99.9%): [2290212.791, 2419264.571] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
+# Parameters: (size = 1000)
+
+# Run progress: 10.00% complete, ETA 00:27:26
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2342518.953 ops/ms
+# Warmup Iteration   2: 2362196.344 ops/ms
+# Warmup Iteration   3: 2348404.638 ops/ms
+# Warmup Iteration   4: 2285298.784 ops/ms
+# Warmup Iteration   5: 2336292.910 ops/ms
+Iteration   1: 2325406.563 ops/ms 31s]
+Iteration   2: 2273935.971 ops/ms 33s]
+Iteration   3: 2351842.658 ops/ms 35s]
+Iteration   4: 2299085.983 ops/ms 37s]
+Iteration   5: 2307670.022 ops/ms 39s]
+
+> Task :performance:jmh 
+
+# Run progress: 11.11% complete, ETA 00:27:05
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2252393.568 ops/ms
+# Warmup Iteration   2: 2336300.259 ops/ms
+# Warmup Iteration   3: 2298122.027 ops/ms
+# Warmup Iteration   4: 2371346.378 ops/ms
+# Warmup Iteration   5: 2350805.253 ops/ms
+Iteration   1: 2378072.299 ops/ms 51s]
+Iteration   2: 2379006.022 ops/ms 53s]
+Iteration   3: 2399291.682 ops/ms 55s]
+Iteration   4: 2354019.414 ops/ms 57s]
+Iteration   5: 2336212.836 ops/ms 59s]
+
+> Task :performance:jmh 
+
+# Run progress: 12.22% complete, ETA 00:26:45
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2279770.798 ops/ms
+# Warmup Iteration   2: 2260660.689 ops/ms
+# Warmup Iteration   3: 2364441.096 ops/ms
+# Warmup Iteration   4: 2379327.708 ops/ms
+# Warmup Iteration   5: 2320435.096 ops/ms
+Iteration   1: 2383740.604 ops/ms 11s]
+Iteration   2: 2400609.038 ops/ms 13s]
+Iteration   3: 2366424.552 ops/ms 15s]
+Iteration   4: 2418975.927 ops/ms 17s]
+Iteration   5: 2409469.662 ops/ms 19s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
+  2358917.549 ±(99.9%) 46171.873 ops/ms [Average]
+  (min, avg, max) = (2273935.971, 2358917.549, 2418975.927), stdev = 43189.198
+  CI (99.9%): [2312745.676, 2405089.421] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
+# Parameters: (size = 1000000)
+
+# Run progress: 13.33% complete, ETA 00:26:25
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2336401.383 ops/ms
+# Warmup Iteration   2: 2326950.771 ops/ms
+# Warmup Iteration   3: 2439263.909 ops/ms
+# Warmup Iteration   4: 2426395.199 ops/ms
+# Warmup Iteration   5: 2375214.939 ops/ms
+Iteration   1: 2396373.671 ops/ms 32s]
+Iteration   2: 2425627.803 ops/ms 34s]
+Iteration   3: 2398974.812 ops/ms 36s]
+Iteration   4: 2427308.668 ops/ms 38s]
+Iteration   5: 2437002.996 ops/ms 40s]
+
+> Task :performance:jmh 
+
+# Run progress: 14.44% complete, ETA 00:26:04
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2359670.827 ops/ms
+# Warmup Iteration   2: 2343292.524 ops/ms
+# Warmup Iteration   3: 2387035.552 ops/ms
+# Warmup Iteration   4: 2389847.546 ops/ms
+# Warmup Iteration   5: 2378055.870 ops/ms
+Iteration   1: 2409065.812 ops/ms 52s]
+Iteration   2: 2414787.222 ops/ms 54s]
+Iteration   3: 2370504.545 ops/ms 56s]
+Iteration   4: 2345494.840 ops/ms 58s]
+Iteration   5: 2409306.038 ops/ms 0s]
+
+> Task :performance:jmh 
+
+# Run progress: 15.56% complete, ETA 00:25:44
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2361463.872 ops/ms
+# Warmup Iteration   2: 2417557.672 ops/ms
+# Warmup Iteration   3: 2435473.712 ops/ms
+# Warmup Iteration   4: 2397349.353 ops/ms
+# Warmup Iteration   5: 2363592.671 ops/ms
+Iteration   1: 2318021.245 ops/ms 12s]
+Iteration   2: 2319111.267 ops/ms 14s]
+Iteration   3: 2331228.546 ops/ms 16s]
+Iteration   4: 2308820.112 ops/ms 18s]
+Iteration   5: 2344906.528 ops/ms 20s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
+  2377102.274 ±(99.9%) 48227.814 ops/ms [Average]
+  (min, avg, max) = (2308820.112, 2377102.274, 2437002.996), stdev = 45112.327
+  CI (99.9%): [2328874.460, 2425330.088] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
+# Parameters: (size = 1)
+
+# Run progress: 16.67% complete, ETA 00:25:23
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2342680.098 ops/ms
+# Warmup Iteration   2: 2391279.670 ops/ms
+# Warmup Iteration   3: 2319025.109 ops/ms
+# Warmup Iteration   4: 2320770.390 ops/ms
+# Warmup Iteration   5: 2310275.526 ops/ms
+Iteration   1: 2328374.050 ops/ms 33s]
+Iteration   2: 2327160.372 ops/ms 35s]
+Iteration   3: 2172384.031 ops/ms 37s]
+Iteration   4: 2167519.682 ops/ms 39s]
+Iteration   5: 2122716.982 ops/ms 41s]
+
+> Task :performance:jmh 
+
+# Run progress: 17.78% complete, ETA 00:25:03
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 1823340.272 ops/ms
+# Warmup Iteration   2: 1908363.603 ops/ms
+# Warmup Iteration   3: 1963513.731 ops/ms
+# Warmup Iteration   4: 1987263.506 ops/ms
+# Warmup Iteration   5: 2082123.145 ops/ms
+Iteration   1: 2094979.293 ops/ms 53s]
+Iteration   2: 2086066.314 ops/ms 55s]
+Iteration   3: 2146545.656 ops/ms 57s]
+Iteration   4: 2163427.438 ops/ms 59s]
+Iteration   5: 2186297.418 ops/ms 1s]
+
+> Task :performance:jmh 
+
+# Run progress: 18.89% complete, ETA 00:24:43
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2232495.670 ops/ms
+# Warmup Iteration   2: 2208488.316 ops/ms
+# Warmup Iteration   3: 2207021.648 ops/ms
+# Warmup Iteration   4: 2252480.449 ops/ms
+# Warmup Iteration   5: 2242127.044 ops/ms
+Iteration   1: 2260108.399 ops/ms 13s]
+Iteration   2: 2216520.770 ops/ms 15s]
+Iteration   3: 2287630.648 ops/ms 17s]
+Iteration   4: 2310375.622 ops/ms 19s]
+Iteration   5: 2332844.044 ops/ms 21s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
+  2213530.048 ±(99.9%) 93671.364 ops/ms [Average]
+  (min, avg, max) = (2086066.314, 2213530.048, 2332844.044), stdev = 87620.252
+  CI (99.9%): [2119858.684, 2307201.412] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
+# Parameters: (size = 10)
+
+# Run progress: 20.00% complete, ETA 00:24:23
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2310244.511 ops/ms
+# Warmup Iteration   2: 2232207.425 ops/ms
+# Warmup Iteration   3: 2246756.237 ops/ms
+# Warmup Iteration   4: 2198234.349 ops/ms
+# Warmup Iteration   5: 2141833.061 ops/ms
+Iteration   1: 2100210.705 ops/ms 34s]
+Iteration   2: 2121846.247 ops/ms 36s]
+Iteration   3: 2217144.579 ops/ms 38s]
+Iteration   4: 2230681.391 ops/ms 40s]
+Iteration   5: 2278155.801 ops/ms 42s]
+
+> Task :performance:jmh 
+
+# Run progress: 21.11% complete, ETA 00:24:02
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2281563.814 ops/ms
+# Warmup Iteration   2: 2314157.231 ops/ms
+# Warmup Iteration   3: 2331984.393 ops/ms
+# Warmup Iteration   4: 2337352.734 ops/ms
+# Warmup Iteration   5: 2330601.245 ops/ms
+Iteration   1: 2350226.113 ops/ms 54s]
+Iteration   2: 2355253.099 ops/ms 56s]
+Iteration   3: 2342077.951 ops/ms 58s]
+Iteration   4: 2362894.907 ops/ms 0s]
+Iteration   5: 2374679.910 ops/ms 2s]
+
+> Task :performance:jmh 
+
+# Run progress: 22.22% complete, ETA 00:23:42
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2422151.309 ops/ms
+# Warmup Iteration   2: 2397878.350 ops/ms
+# Warmup Iteration   3: 2367110.519 ops/ms
+# Warmup Iteration   4: 2345567.794 ops/ms
+# Warmup Iteration   5: 2343522.078 ops/ms
+Iteration   1: 2280856.912 ops/ms 14s]
+Iteration   2: 2278708.543 ops/ms 16s]
+Iteration   3: 2335579.440 ops/ms 18s]
+Iteration   4: 2279455.882 ops/ms 20s]
+Iteration   5: 2258175.105 ops/ms 22s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
+  2277729.772 ±(99.9%) 89214.824 ops/ms [Average]
+  (min, avg, max) = (2100210.705, 2277729.772, 2374679.910), stdev = 83451.602
+  CI (99.9%): [2188514.948, 2366944.597] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
+# Parameters: (size = 100)
+
+# Run progress: 23.33% complete, ETA 00:23:22
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2255300.703 ops/ms
+# Warmup Iteration   2: 2253076.471 ops/ms
+# Warmup Iteration   3: 2263746.172 ops/ms
+# Warmup Iteration   4: 2293238.566 ops/ms
+# Warmup Iteration   5: 2338004.373 ops/ms
+Iteration   1: 2337615.798 ops/ms 35s]
+Iteration   2: 2316748.727 ops/ms 37s]
+Iteration   3: 2332452.804 ops/ms 39s]
+Iteration   4: 2360212.497 ops/ms 41s]
+Iteration   5: 2359702.118 ops/ms 43s]
+
+> Task :performance:jmh 
+
+# Run progress: 24.44% complete, ETA 00:23:01
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2385664.251 ops/ms
+# Warmup Iteration   2: 2373913.953 ops/ms
+# Warmup Iteration   3: 2354899.539 ops/ms
+# Warmup Iteration   4: 2338923.481 ops/ms
+# Warmup Iteration   5: 2327816.844 ops/ms
+Iteration   1: 2288661.200 ops/ms 55s]
+Iteration   2: 2248884.383 ops/ms 57s]
+Iteration   3: 2296583.522 ops/ms 59s]
+Iteration   4: 2273022.150 ops/ms 1s]
+Iteration   5: 2190108.584 ops/ms 3s]
+
+> Task :performance:jmh 
+
+# Run progress: 25.56% complete, ETA 00:22:41
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2051293.257 ops/ms
+# Warmup Iteration   2: 2102788.485 ops/ms
+# Warmup Iteration   3: 2087029.856 ops/ms
+# Warmup Iteration   4: 2092147.420 ops/ms
+# Warmup Iteration   5: 2106595.623 ops/ms
+Iteration   1: 2124288.401 ops/ms 15s]
+Iteration   2: 2125787.390 ops/ms 17s]
+Iteration   3: 2196225.950 ops/ms 19s]
+Iteration   4: 2214542.244 ops/ms 21s]
+Iteration   5: 2183902.808 ops/ms 23s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
+  2256582.572 ±(99.9%) 85712.999 ops/ms [Average]
+  (min, avg, max) = (2124288.401, 2256582.572, 2360212.497), stdev = 80175.993
+  CI (99.9%): [2170869.572, 2342295.571] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
+# Parameters: (size = 1000)
+
+# Run progress: 26.67% complete, ETA 00:22:21
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2229881.439 ops/ms
+# Warmup Iteration   2: 2255602.598 ops/ms
+# Warmup Iteration   3: 2251814.140 ops/ms
+# Warmup Iteration   4: 2203912.297 ops/ms
+# Warmup Iteration   5: 2190611.927 ops/ms
+Iteration   1: 2182556.919 ops/ms 36s]
+Iteration   2: 2220164.923 ops/ms 38s]
+Iteration   3: 2251318.888 ops/ms 40s]
+Iteration   4: 2244992.415 ops/ms 42s]
+Iteration   5: 2248810.478 ops/ms 44s]
+
+> Task :performance:jmh 
+
+# Run progress: 27.78% complete, ETA 00:22:00
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2207958.645 ops/ms
+# Warmup Iteration   2: 2246968.031 ops/ms
+# Warmup Iteration   3: 2253001.904 ops/ms
+# Warmup Iteration   4: 2260787.828 ops/ms
+# Warmup Iteration   5: 2277185.350 ops/ms
+Iteration   1: 2266669.286 ops/ms 56s]
+Iteration   2: 2258485.192 ops/ms 58s]
+Iteration   3: 2262338.531 ops/ms 0s]
+Iteration   4: 2266700.248 ops/ms 2s]
+Iteration   5: 2245503.357 ops/ms 4s]
+
+> Task :performance:jmh 
+
+# Run progress: 28.89% complete, ETA 00:21:40
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2244040.741 ops/ms
+# Warmup Iteration   2: 2242805.984 ops/ms
+# Warmup Iteration   3: 2264725.818 ops/ms
+# Warmup Iteration   4: 2269925.753 ops/ms
+# Warmup Iteration   5: 2253985.719 ops/ms
+Iteration   1: 2245948.077 ops/ms 16s]
+Iteration   2: 2334267.611 ops/ms 18s]
+Iteration   3: 2320600.705 ops/ms 20s]
+Iteration   4: 2325711.126 ops/ms 22s]
+Iteration   5: 2322076.536 ops/ms 24s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
+  2266409.619 ±(99.9%) 45408.683 ops/ms [Average]
+  (min, avg, max) = (2182556.919, 2266409.619, 2334267.611), stdev = 42475.310
+  CI (99.9%): [2221000.937, 2311818.302] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
+# Parameters: (size = 1000000)
+
+# Run progress: 30.00% complete, ETA 00:21:20
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2404460.160 ops/ms
+# Warmup Iteration   2: 2387830.290 ops/ms
+# Warmup Iteration   3: 2369723.166 ops/ms
+# Warmup Iteration   4: 2385879.792 ops/ms
+# Warmup Iteration   5: 2374524.743 ops/ms
+Iteration   1: 2374540.266 ops/ms 37s]
+Iteration   2: 2339855.950 ops/ms 39s]
+Iteration   3: 2334571.224 ops/ms 41s]
+Iteration   4: 2320980.381 ops/ms 43s]
+Iteration   5: 2314417.693 ops/ms 45s]
+
+> Task :performance:jmh 
+
+# Run progress: 31.11% complete, ETA 00:21:01
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2246506.655 ops/ms
+# Warmup Iteration   2: 2260221.698 ops/ms
+# Warmup Iteration   3: 2262755.360 ops/ms
+# Warmup Iteration   4: 2244053.164 ops/ms
+# Warmup Iteration   5: 2238836.406 ops/ms
+Iteration   1: 2085645.793 ops/ms 58s]
+Iteration   2: 1991439.308 ops/msm 0s]
+Iteration   3: 2071547.091 ops/msm 2s]
+Iteration   4: 2093323.666 ops/msm 4s]
+Iteration   5: 2164039.839 ops/msm 6s]
+
+> Task :performance:jmh 
+
+# Run progress: 32.22% complete, ETA 00:20:41
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2204707.096 ops/ms
+# Warmup Iteration   2: 2246562.983 ops/ms
+# Warmup Iteration   3: 2236846.233 ops/ms
+# Warmup Iteration   4: 2236708.716 ops/ms
+# Warmup Iteration   5: 2251950.034 ops/ms
+Iteration   1: 2242241.713 ops/msm 18s]
+Iteration   2: 2224556.953 ops/msm 20s]
+Iteration   3: 2167863.873 ops/msm 22s]
+Iteration   4: 2121869.047 ops/msm 24s]
+Iteration   5: 2115336.794 ops/msm 26s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
+  2197481.973 ±(99.9%) 127202.807 ops/ms [Average]
+  (min, avg, max) = (1991439.308, 2197481.973, 2374540.266), stdev = 118985.585
+  CI (99.9%): [2070279.166, 2324684.780] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
+# Parameters: (size = 1)
+
+# Run progress: 33.33% complete, ETA 00:20:20
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2072966.050 ops/ms
+# Warmup Iteration   2: 2086442.713 ops/ms
+# Warmup Iteration   3: 2097913.774 ops/ms
+# Warmup Iteration   4: 2100140.403 ops/ms
+# Warmup Iteration   5: 2126788.658 ops/ms
+Iteration   1: 2123761.518 ops/msm 38s]
+Iteration   2: 2126641.670 ops/msm 40s]
+Iteration   3: 2179107.295 ops/msm 42s]
+Iteration   4: 2157622.802 ops/msm 44s]
+Iteration   5: 2161562.719 ops/msm 46s]
+
+> Task :performance:jmh 
+
+# Run progress: 34.44% complete, ETA 00:20:00
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2060525.725 ops/ms
+# Warmup Iteration   2: 2043709.497 ops/ms
+# Warmup Iteration   3: 2074446.034 ops/ms
+# Warmup Iteration   4: 2130779.493 ops/ms
+# Warmup Iteration   5: 2159053.289 ops/ms
+Iteration   1: 2156955.563 ops/msm 59s]
+Iteration   2: 2173032.038 ops/msm 1s]
+Iteration   3: 2260841.656 ops/msm 3s]
+Iteration   4: 2276591.720 ops/msm 5s]
+Iteration   5: 2241083.816 ops/msm 7s]
+
+> Task :performance:jmh 
+
+# Run progress: 35.56% complete, ETA 00:19:40
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2235807.667 ops/ms
+# Warmup Iteration   2: 2215580.221 ops/ms
+# Warmup Iteration   3: 2254079.811 ops/ms
+# Warmup Iteration   4: 2305579.154 ops/ms
+# Warmup Iteration   5: 2306683.659 ops/ms
+Iteration   1: 2200431.470 ops/msm 19s]
+Iteration   2: 2104845.640 ops/msm 21s]
+Iteration   3: 2125033.784 ops/msm 23s]
+Iteration   4: 2055892.290 ops/msm 25s]
+Iteration   5: 1987848.082 ops/msm 27s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
+  2155416.804 ±(99.9%) 80496.840 ops/ms [Average]
+  (min, avg, max) = (1987848.082, 2155416.804, 2276591.720), stdev = 75296.794
+  CI (99.9%): [2074919.964, 2235913.644] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
+# Parameters: (size = 10)
+
+# Run progress: 36.67% complete, ETA 00:19:19
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2004823.474 ops/ms
+# Warmup Iteration   2: 2025912.271 ops/ms
+# Warmup Iteration   3: 2102412.845 ops/ms
+# Warmup Iteration   4: 2148618.642 ops/ms
+# Warmup Iteration   5: 2214476.551 ops/ms
+Iteration   1: 2280908.098 ops/msm 39s]
+Iteration   2: 2316062.275 ops/msm 41s]
+Iteration   3: 2309900.544 ops/msm 43s]
+Iteration   4: 2336237.802 ops/msm 45s]
+Iteration   5: 2281988.611 ops/msm 47s]
+
+> Task :performance:jmh 
+
+# Run progress: 37.78% complete, ETA 00:18:59
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2259787.117 ops/ms
+# Warmup Iteration   2: 2257249.581 ops/ms
+# Warmup Iteration   3: 2225568.464 ops/ms
+# Warmup Iteration   4: 2171518.809 ops/ms
+# Warmup Iteration   5: 2052262.389 ops/ms
+Iteration   1: 1920067.838 ops/msm 0s]
+Iteration   2: 1783323.634 ops/msm 2s]
+Iteration   3: 1889884.657 ops/msm 4s]
+Iteration   4: 1813363.270 ops/msm 6s]
+Iteration   5: 1838316.691 ops/msm 8s]
+
+> Task :performance:jmh 
+
+# Run progress: 38.89% complete, ETA 00:18:39
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 1786076.407 ops/ms
+# Warmup Iteration   2: 1899051.371 ops/ms
+# Warmup Iteration   3: 1843904.380 ops/ms
+# Warmup Iteration   4: 1917753.450 ops/ms
+# Warmup Iteration   5: 2005736.009 ops/ms
+Iteration   1: 2082558.580 ops/msm 20s]
+Iteration   2: 2073493.936 ops/msm 22s]
+Iteration   3: 2002315.759 ops/msm 24s]
+Iteration   4: 2007771.407 ops/msm 26s]
+Iteration   5: 1991908.855 ops/msm 28s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
+  2061873.464 ±(99.9%) 211658.982 ops/ms [Average]
+  (min, avg, max) = (1783323.634, 2061873.464, 2336237.802), stdev = 197985.943
+  CI (99.9%): [1850214.482, 2273532.446] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
+# Parameters: (size = 100)
+
+# Run progress: 40.00% complete, ETA 00:18:19
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2035270.607 ops/ms
+# Warmup Iteration   2: 2031462.711 ops/ms
+# Warmup Iteration   3: 2064106.284 ops/ms
+# Warmup Iteration   4: 2054880.497 ops/ms
+# Warmup Iteration   5: 2053480.300 ops/ms
+Iteration   1: 2054168.698 ops/msm 41s]
+Iteration   2: 2042263.186 ops/msm 43s]
+Iteration   3: 2056066.489 ops/msm 45s]
+Iteration   4: 2031856.259 ops/msm 47s]
+Iteration   5: 2085950.836 ops/msm 49s]
+
+> Task :performance:jmh 
+
+# Run progress: 41.11% complete, ETA 00:17:59
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2101840.592 ops/ms
+# Warmup Iteration   2: 2119853.527 ops/ms
+# Warmup Iteration   3: 2122618.255 ops/ms
+# Warmup Iteration   4: 2142245.167 ops/ms
+# Warmup Iteration   5: 2164750.269 ops/ms
+Iteration   1: 2173146.270 ops/msm 1s]
+Iteration   2: 2161453.569 ops/msm 3s]
+Iteration   3: 2190253.562 ops/msm 5s]
+Iteration   4: 2166720.168 ops/msm 7s]
+Iteration   5: 2187823.416 ops/msm 9s]
+
+> Task :performance:jmh 
+
+# Run progress: 42.22% complete, ETA 00:17:38
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2200183.787 ops/ms
+# Warmup Iteration   2: 2199574.405 ops/ms
+# Warmup Iteration   3: 2198885.846 ops/ms
+# Warmup Iteration   4: 2231156.914 ops/ms
+# Warmup Iteration   5: 2258654.538 ops/ms
+Iteration   1: 2270132.147 ops/msm 22s]
+Iteration   2: 2151326.686 ops/msm 24s]
+Iteration   3: 2007830.767 ops/msm 26s]
+Iteration   4: 1988720.125 ops/msm 28s]
+Iteration   5: 2029296.090 ops/msm 30s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
+  2106467.218 ±(99.9%) 89659.046 ops/ms [Average]
+  (min, avg, max) = (1988720.125, 2106467.218, 2270132.147), stdev = 83867.127
+  CI (99.9%): [2016808.172, 2196126.264] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
+# Parameters: (size = 1000)
+
+# Run progress: 43.33% complete, ETA 00:17:18
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2229609.882 ops/ms
+# Warmup Iteration   2: 2273508.586 ops/ms
+# Warmup Iteration   3: 2279593.606 ops/ms
+# Warmup Iteration   4: 2244133.490 ops/ms
+# Warmup Iteration   5: 2185085.382 ops/ms
+Iteration   1: 2171452.780 ops/msm 43s]
+Iteration   2: 2156146.759 ops/msm 45s]
+Iteration   3: 2100669.072 ops/msm 47s]
+Iteration   4: 2097801.005 ops/msm 49s]
+Iteration   5: 2069710.821 ops/msm 51s]
+
+> Task :performance:jmh 
+
+# Run progress: 44.44% complete, ETA 00:16:59
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2039770.112 ops/ms
+# Warmup Iteration   2: 2092805.309 ops/ms
+# Warmup Iteration   3: 2132571.773 ops/ms
+# Warmup Iteration   4: 2138908.000 ops/ms
+# Warmup Iteration   5: 2226977.074 ops/ms
+Iteration   1: 2215563.207 ops/msm 3s]
+Iteration   2: 2255135.965 ops/msm 5s]
+Iteration   3: 2252746.875 ops/msm 7s]
+Iteration   4: 2232980.014 ops/msm 9s]
+Iteration   5: 2262965.368 ops/msm 11s]
+
+> Task :performance:jmh 
+
+# Run progress: 45.56% complete, ETA 00:16:38
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2268867.503 ops/ms
+# Warmup Iteration   2: 2278024.224 ops/ms
+# Warmup Iteration   3: 2255721.076 ops/ms
+# Warmup Iteration   4: 2234238.307 ops/ms
+# Warmup Iteration   5: 2322237.296 ops/ms
+Iteration   1: 2321958.834 ops/msm 24s]
+Iteration   2: 2269596.281 ops/msm 26s]
+Iteration   3: 2292469.015 ops/msm 28s]
+Iteration   4: 2317414.431 ops/msm 30s]
+Iteration   5: 2282604.726 ops/msm 32s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
+  2219947.677 ±(99.9%) 87623.149 ops/ms [Average]
+  (min, avg, max) = (2069710.821, 2219947.677, 2321958.834), stdev = 81962.748
+  CI (99.9%): [2132324.528, 2307570.826] (assumes normal distribution)
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Throughput, ops/time
+# Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
+# Parameters: (size = 1000000)
+
+# Run progress: 46.67% complete, ETA 00:16:18
+# Fork: 1 of 3
+
+# Warmup Iteration   1: 2258400.676 ops/ms
+# Warmup Iteration   2: 2222009.194 ops/ms
+# Warmup Iteration   3: 2270728.906 ops/ms
+# Warmup Iteration   4: 2263499.699 ops/ms
+# Warmup Iteration   5: 2215880.409 ops/ms
+Iteration   1: 2237204.956 ops/msm 44s]
+Iteration   2: 2251226.715 ops/msm 46s]
+Iteration   3: 2277307.056 ops/msm 48s]
+Iteration   4: 2263696.995 ops/msm 50s]
+Iteration   5: 2321601.651 ops/msm 52s]
+
+> Task :performance:jmh 
+
+# Run progress: 47.78% complete, ETA 00:15:57
+# Fork: 2 of 3
+
+# Warmup Iteration   1: 2334580.766 ops/ms
+# Warmup Iteration   2: 2346828.114 ops/ms
+# Warmup Iteration   3: 2150125.278 ops/ms
+# Warmup Iteration   4: 2113365.105 ops/ms
+# Warmup Iteration   5: 2074662.601 ops/ms
+Iteration   1: 2071983.749 ops/msm 4s]
+Iteration   2: 1943357.148 ops/msm 6s]
+Iteration   3: 1925116.088 ops/msm 8s]
+Iteration   4: 1945656.054 ops/msm 10s]
+Iteration   5: 2009485.116 ops/msm 12s]
+
+> Task :performance:jmh 
+
+# Run progress: 48.89% complete, ETA 00:15:37
+# Fork: 3 of 3
+
+# Warmup Iteration   1: 2098583.782 ops/ms
+# Warmup Iteration   2: 2121611.005 ops/ms
+# Warmup Iteration   3: 2190905.304 ops/ms
+# Warmup Iteration   4: 2231800.417 ops/ms
+# Warmup Iteration   5: 2234437.725 ops/ms
+Iteration   1: 2256581.239 ops/msm 25s]
+Iteration   2: 1897045.303 ops/msm 27s]
+Iteration   3: 1955850.930 ops/msm 29s]
+Iteration   4: 1998698.981 ops/msm 31s]
+Iteration   5: 2037698.836 ops/msm 33s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
+  2092834.055 ±(99.9%) 165819.668 ops/ms [Average]
+  (min, avg, max) = (1897045.303, 2092834.055, 2321601.651), stdev = 155107.820
+  CI (99.9%): [1927014.387, 2258653.722] (assumes normal distribution)
 
 
 # JMH version: 1.19
@@ -78,61 +1034,59 @@ Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
-# Parameters: (count = 10)
+# Parameters: (size = 1)
 
-# Run progress: 6.67% complete, ETA 00:14:14
+# Run progress: 50.00% complete, ETA 00:15:17
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.035 ms/op
-# Warmup Iteration   2: 0.034 ms/ops]
-# Warmup Iteration   3: 0.034 ms/ops]
-# Warmup Iteration   4: 0.034 ms/op1s]
-# Warmup Iteration   5: 0.034 ms/op3s]
-Iteration   1: 0.034 ms/opING [1m 15s]
-Iteration   2: 0.034 ms/opING [1m 17s]
-Iteration   3: 0.034 ms/opING [1m 19s]
-Iteration   4: 0.034 ms/opING [1m 21s]
-Iteration   5: 0.034 ms/opING [1m 23s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op3s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [15m 45s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [15m 47s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [15m 49s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [15m 51s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [15m 53s]
 
 > Task :performance:jmh 
 
-# Run progress: 8.89% complete, ETA 00:13:54
+# Run progress: 51.11% complete, ETA 00:14:56
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.035 ms/op
-# Warmup Iteration   2: 0.034 ms/op8s]
-# Warmup Iteration   3: 0.034 ms/op0s]
-# Warmup Iteration   4: 0.034 ms/op2s]
-# Warmup Iteration   5: 0.034 ms/op4s]
-Iteration   1: 0.034 ms/opING [1m 36s]
-Iteration   2: 0.034 ms/opING [1m 38s]
-Iteration   3: 0.035 ms/opING [1m 40s]
-Iteration   4: 0.034 ms/opING [1m 42s]
-Iteration   5: 0.034 ms/opING [1m 44s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [16m 6s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [16m 8s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [16m 10s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [16m 12s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [16m 14s]
 
 > Task :performance:jmh 
 
-# Run progress: 11.11% complete, ETA 00:13:33
+# Run progress: 52.22% complete, ETA 00:14:36
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.035 ms/op
-# Warmup Iteration   2: 0.034 ms/op8s]
-# Warmup Iteration   3: 0.034 ms/op0s]
-# Warmup Iteration   4: 0.035 ms/op2s]
-# Warmup Iteration   5: 0.035 ms/op4s]
-Iteration   1: 0.035 ms/opING [1m 56s]
-Iteration   2: 0.035 ms/opING [1m 58s]
-Iteration   3: 0.035 ms/opING [2m 0s]
-Iteration   4: 0.035 ms/opING [2m 2s]
-Iteration   5: 0.035 ms/opING [2m 4s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op4s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [16m 26s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [16m 28s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [16m 30s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [16m 32s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [16m 34s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
-  0.034 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.034, 0.034, 0.035), stdev = 0.001
-  CI (99.9%): [0.034, 0.035] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -145,61 +1099,59 @@ Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
-# Parameters: (count = 100)
+# Parameters: (size = 10)
 
-# Run progress: 13.33% complete, ETA 00:13:13
+# Run progress: 53.33% complete, ETA 00:14:16
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.352 ms/op
-# Warmup Iteration   2: 0.336 ms/ops]
-# Warmup Iteration   3: 0.332 ms/op0s]
-# Warmup Iteration   4: 0.333 ms/op2s]
-# Warmup Iteration   5: 0.333 ms/op4s]
-Iteration   1: 0.333 ms/opING [2m 16s]
-Iteration   2: 0.331 ms/opING [2m 18s]
-Iteration   3: 0.336 ms/opING [2m 20s]
-Iteration   4: 0.328 ms/opING [2m 22s]
-Iteration   5: 0.333 ms/opING [2m 24s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op4s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [16m 46s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [16m 48s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [16m 50s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [16m 52s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [16m 54s]
 
 > Task :performance:jmh 
 
-# Run progress: 15.56% complete, ETA 00:12:53
+# Run progress: 54.44% complete, ETA 00:13:55
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.348 ms/op
-# Warmup Iteration   2: 0.332 ms/op9s]
-# Warmup Iteration   3: 0.332 ms/op1s]
-# Warmup Iteration   4: 0.347 ms/op3s]
-# Warmup Iteration   5: 0.334 ms/op5s]
-Iteration   1: 0.330 ms/opING [2m 37s]
-Iteration   2: 0.333 ms/opING [2m 39s]
-Iteration   3: 0.334 ms/opING [2m 41s]
-Iteration   4: 0.331 ms/opING [2m 43s]
-Iteration   5: 0.330 ms/opING [2m 45s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [17m 7s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [17m 9s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [17m 11s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [17m 13s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [17m 15s]
 
 > Task :performance:jmh 
 
-# Run progress: 17.78% complete, ETA 00:12:32
+# Run progress: 55.56% complete, ETA 00:13:35
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.345 ms/op
-# Warmup Iteration   2: 0.334 ms/op9s]
-# Warmup Iteration   3: 0.332 ms/op1s]
-# Warmup Iteration   4: 0.336 ms/op3s]
-# Warmup Iteration   5: 0.335 ms/op5s]
-Iteration   1: 0.332 ms/opING [2m 57s]
-Iteration   2: 0.327 ms/opING [2m 59s]
-Iteration   3: 0.334 ms/opING [3m 1s]
-Iteration   4: 0.330 ms/opING [3m 3s]
-Iteration   5: 0.334 ms/opING [3m 5s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op5s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [17m 27s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [17m 29s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [17m 31s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [17m 33s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [17m 35s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
-  0.332 ±(99.9%) 0.003 ms/op [Average]
-  (min, avg, max) = (0.327, 0.332, 0.336), stdev = 0.002
-  CI (99.9%): [0.329, 0.334] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -212,61 +1164,59 @@ Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
-# Parameters: (count = 1000)
+# Parameters: (size = 100)
 
-# Run progress: 20.00% complete, ETA 00:12:12
+# Run progress: 56.67% complete, ETA 00:13:14
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 3.556 ms/op
-# Warmup Iteration   2: 3.343 ms/ops]
-# Warmup Iteration   3: 3.346 ms/op1s]
-# Warmup Iteration   4: 3.370 ms/op3s]
-# Warmup Iteration   5: 3.358 ms/op5s]
-Iteration   1: 3.354 ms/opING [3m 17s]
-Iteration   2: 3.366 ms/opING [3m 19s]
-Iteration   3: 3.350 ms/opING [3m 21s]
-Iteration   4: 3.365 ms/opING [3m 23s]
-Iteration   5: 3.310 ms/opING [3m 25s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op6s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [17m 48s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [17m 50s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [17m 52s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [17m 54s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [17m 56s]
 
 > Task :performance:jmh 
 
-# Run progress: 22.22% complete, ETA 00:11:52
+# Run progress: 57.78% complete, ETA 00:12:54
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 3.530 ms/op
-# Warmup Iteration   2: 3.337 ms/op0s]
-# Warmup Iteration   3: 3.345 ms/op2s]
-# Warmup Iteration   4: 3.357 ms/op4s]
-# Warmup Iteration   5: 3.348 ms/op6s]
-Iteration   1: 3.337 ms/opING [3m 38s]
-Iteration   2: 3.351 ms/opING [3m 40s]
-Iteration   3: 3.348 ms/opING [3m 42s]
-Iteration   4: 3.331 ms/opING [3m 44s]
-Iteration   5: 3.380 ms/opING [3m 46s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [18m 8s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [18m 10s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [18m 12s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [18m 14s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [18m 16s]
 
 > Task :performance:jmh 
 
-# Run progress: 24.44% complete, ETA 00:11:31
+# Run progress: 58.89% complete, ETA 00:12:34
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 3.542 ms/op
-# Warmup Iteration   2: 3.336 ms/op0s]
-# Warmup Iteration   3: 3.371 ms/op2s]
-# Warmup Iteration   4: 3.354 ms/op4s]
-# Warmup Iteration   5: 3.364 ms/op6s]
-Iteration   1: 3.332 ms/opING [3m 58s]
-Iteration   2: 3.373 ms/opING [4m 0s]
-Iteration   3: 3.387 ms/opING [4m 2s]
-Iteration   4: 3.329 ms/opING [4m 4s]
-Iteration   5: 3.405 ms/opING [4m 6s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op7s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [18m 29s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [18m 31s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [18m 33s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [18m 35s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [18m 37s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
-  3.355 ±(99.9%) 0.027 ms/op [Average]
-  (min, avg, max) = (3.310, 3.355, 3.405), stdev = 0.025
-  CI (99.9%): [3.328, 3.381] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -279,61 +1229,124 @@ Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
-# Parameters: (count = 1000000)
+# Parameters: (size = 1000)
 
-# Run progress: 26.67% complete, ETA 00:11:11
+# Run progress: 60.00% complete, ETA 00:12:14
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 4408.268 ms/op
-# Warmup Iteration   2: 3613.132 ms/op
-# Warmup Iteration   3: 3684.984 ms/op
-# Warmup Iteration   4: 3710.927 ms/op
-# Warmup Iteration   5: 3438.427 ms/op
-Iteration   1: 3457.624 ms/op [4m 27s]
-Iteration   2: 3383.102 ms/op [4m 31s]
-Iteration   3: 3493.024 ms/op [4m 34s]
-Iteration   4: 3389.144 ms/op [4m 38s]
-Iteration   5: 3390.087 ms/op [4m 41s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op7s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [18m 49s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [18m 51s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [18m 53s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [18m 55s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [18m 57s]
 
 > Task :performance:jmh 
 
-# Run progress: 28.89% complete, ETA 00:11:30
+# Run progress: 61.11% complete, ETA 00:11:53
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 4273.951 ms/op
-# Warmup Iteration   2: 4079.244 ms/op
-# Warmup Iteration   3: 3440.040 ms/op
-# Warmup Iteration   4: 3474.414 ms/op
-# Warmup Iteration   5: 3444.633 ms/op
-Iteration   1: 3419.323 ms/op [5m 3s]
-Iteration   2: 3402.034 ms/op [5m 7s]
-Iteration   3: 3383.935 ms/op [5m 10s]
-Iteration   4: 3408.089 ms/op [5m 14s]
-Iteration   5: 3412.539 ms/op [5m 17s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [19m 9s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [19m 11s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [19m 13s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [19m 15s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [19m 17s]
 
 > Task :performance:jmh 
 
-# Run progress: 31.11% complete, ETA 00:11:41
+# Run progress: 62.22% complete, ETA 00:11:33
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 4245.157 ms/op
-# Warmup Iteration   2: 4065.066 ms/op
-# Warmup Iteration   3: 3462.770 ms/op
-# Warmup Iteration   4: 3438.581 ms/op
-# Warmup Iteration   5: 3426.308 ms/op
-Iteration   1: 3427.379 ms/op [5m 40s]
-Iteration   2: 3362.346 ms/op [5m 43s]
-Iteration   3: 3451.718 ms/op [5m 46s]
-Iteration   4: 3390.710 ms/op [5m 50s]
-Iteration   5: 3412.130 ms/op [5m 53s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op8s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [19m 30s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [19m 32s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [19m 34s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [19m 36s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [19m 38s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
-  3412.212 ±(99.9%) 36.335 ms/op [Average]
-  (min, avg, max) = (3362.346, 3412.212, 3493.024), stdev = 33.988
-  CI (99.9%): [3375.877, 3448.547] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
+
+
+# JMH version: 1.19
+# VM version: JDK 1.8.0_144, VM 25.144-b01
+# VM invoker: /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/bin/java
+# VM options: <none>
+# Warmup: 5 iterations, 2 s each
+# Measurement: 5 iterations, 2 s each
+# Timeout: 10 min per iteration
+# Threads: 1 thread, will synchronize iterations
+# Benchmark mode: Average time, time/op
+# Benchmark: org.apache.groovy.bench.ListBench.equalsDefaultGroovy
+# Parameters: (size = 1000000)
+
+# Run progress: 63.33% complete, ETA 00:11:12
+# Fork: 1 of 3
+
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op8s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [19m 50s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [19m 52s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [19m 54s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [19m 56s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [19m 58s]
+
+> Task :performance:jmh 
+
+# Run progress: 64.44% complete, ETA 00:10:52
+# Fork: 2 of 3
+
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [20m 10s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [20m 12s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [20m 14s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [20m 16s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [20m 18s]
+
+> Task :performance:jmh 
+
+# Run progress: 65.56% complete, ETA 00:10:31
+# Fork: 3 of 3
+
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op9s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [20m 30s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [20m 33s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [20m 35s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [20m 37s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [20m 39s]
+
+> Task :performance:jmh 
+
+
+Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -346,61 +1359,59 @@ Result "org.apache.groovy.bench.ListBench.equalsDefaultGroovy":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
-# Parameters: (count = 1)
+# Parameters: (size = 1)
 
-# Run progress: 33.33% complete, ETA 00:11:45
+# Run progress: 66.67% complete, ETA 00:10:11
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.004 ms/op9s]
-# Warmup Iteration   3: 0.004 ms/ops]
-# Warmup Iteration   4: 0.004 ms/ops]
-# Warmup Iteration   5: 0.004 ms/ops]
-Iteration   1: 0.003 ms/opING [6m 7s]
-Iteration   2: 0.004 ms/opING [6m 9s]
-Iteration   3: 0.004 ms/opING [6m 11s]
-Iteration   4: 0.004 ms/opING [6m 13s]
-Iteration   5: 0.004 ms/opING [6m 15s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op9s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [20m 51s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [20m 53s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [20m 55s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [20m 57s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [20m 59s]
 
 > Task :performance:jmh 
 
-# Run progress: 35.56% complete, ETA 00:11:16
+# Run progress: 67.78% complete, ETA 00:09:51
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op9s]
-# Warmup Iteration   3: 0.003 ms/op1s]
-# Warmup Iteration   4: 0.003 ms/op3s]
-# Warmup Iteration   5: 0.004 ms/op5s]
-Iteration   1: 0.004 ms/opING [6m 27s]
-Iteration   2: 0.004 ms/opING [6m 29s]
-Iteration   3: 0.004 ms/opING [6m 31s]
-Iteration   4: 0.004 ms/opING [6m 33s]
-Iteration   5: 0.003 ms/opING [6m 35s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [21m 11s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [21m 13s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [21m 15s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [21m 17s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [21m 19s]
 
 > Task :performance:jmh 
 
-# Run progress: 37.78% complete, ETA 00:10:48
+# Run progress: 68.89% complete, ETA 00:09:30
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op0s]
-# Warmup Iteration   3: 0.004 ms/op2s]
-# Warmup Iteration   4: 0.004 ms/op4s]
-# Warmup Iteration   5: 0.003 ms/op6s]
-Iteration   1: 0.004 ms/opING [6m 48s]
-Iteration   2: 0.003 ms/opING [6m 50s]
-Iteration   3: 0.003 ms/opING [6m 52s]
-Iteration   4: 0.004 ms/opING [6m 54s]
-Iteration   5: 0.004 ms/opING [6m 56s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op9s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [21m 31s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [21m 33s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [21m 35s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [21m 37s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [21m 39s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
-  0.004 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.003, 0.004, 0.004), stdev = 0.001
-  CI (99.9%): [0.003, 0.004] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -413,61 +1424,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
-# Parameters: (count = 10)
+# Parameters: (size = 10)
 
-# Run progress: 40.00% complete, ETA 00:10:20
+# Run progress: 70.00% complete, ETA 00:09:10
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.036 ms/op
-# Warmup Iteration   2: 0.034 ms/ops]
-# Warmup Iteration   3: 0.034 ms/ops]
-# Warmup Iteration   4: 0.034 ms/ops]
-# Warmup Iteration   5: 0.034 ms/ops]
-Iteration   1: 0.035 ms/opING [7m 8s]
-Iteration   2: 0.034 ms/opING [7m 10s]
-Iteration   3: 0.034 ms/opING [7m 12s]
-Iteration   4: 0.035 ms/opING [7m 14s]
-Iteration   5: 0.034 ms/opING [7m 16s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op0s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [21m 52s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [21m 54s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [21m 56s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [21m 58s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [22m 0s]
 
 > Task :performance:jmh 
 
-# Run progress: 42.22% complete, ETA 00:09:54
+# Run progress: 71.11% complete, ETA 00:08:49
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.038 ms/op
-# Warmup Iteration   2: 0.034 ms/op0s]
-# Warmup Iteration   3: 0.034 ms/op2s]
-# Warmup Iteration   4: 0.034 ms/op4s]
-# Warmup Iteration   5: 0.034 ms/op6s]
-Iteration   1: 0.034 ms/opING [7m 28s]
-Iteration   2: 0.035 ms/opING [7m 30s]
-Iteration   3: 0.034 ms/opING [7m 32s]
-Iteration   4: 0.035 ms/opING [7m 34s]
-Iteration   5: 0.035 ms/opING [7m 36s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op1s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [22m 13s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [22m 15s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [22m 17s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [22m 19s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [22m 21s]
 
 > Task :performance:jmh 
 
-# Run progress: 44.44% complete, ETA 00:09:28
+# Run progress: 72.22% complete, ETA 00:08:29
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.036 ms/op
-# Warmup Iteration   2: 0.035 ms/op1s]
-# Warmup Iteration   3: 0.034 ms/op3s]
-# Warmup Iteration   4: 0.035 ms/op5s]
-# Warmup Iteration   5: 0.034 ms/op7s]
-Iteration   1: 0.034 ms/opING [7m 49s]
-Iteration   2: 0.035 ms/opING [7m 51s]
-Iteration   3: 0.034 ms/opING [7m 53s]
-Iteration   4: 0.034 ms/opING [7m 55s]
-Iteration   5: 0.035 ms/opING [7m 57s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op1s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [22m 33s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [22m 35s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [22m 37s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [22m 39s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [22m 41s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
-  0.035 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.034, 0.035, 0.035), stdev = 0.001
-  CI (99.9%): [0.034, 0.035] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -480,61 +1489,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
-# Parameters: (count = 100)
+# Parameters: (size = 100)
 
-# Run progress: 46.67% complete, ETA 00:09:02
+# Run progress: 73.33% complete, ETA 00:08:09
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.358 ms/op
-# Warmup Iteration   2: 0.334 ms/ops]
-# Warmup Iteration   3: 0.334 ms/ops]
-# Warmup Iteration   4: 0.331 ms/ops]
-# Warmup Iteration   5: 0.334 ms/ops]
-Iteration   1: 0.337 ms/opING [8m 9s]
-Iteration   2: 0.335 ms/opING [8m 11s]
-Iteration   3: 0.335 ms/opING [8m 13s]
-Iteration   4: 0.334 ms/opING [8m 15s]
-Iteration   5: 0.337 ms/opING [8m 17s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op1s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [22m 53s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [22m 55s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [22m 57s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [22m 59s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [23m 1s]
 
 > Task :performance:jmh 
 
-# Run progress: 48.89% complete, ETA 00:08:37
+# Run progress: 74.44% complete, ETA 00:07:48
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.356 ms/op
-# Warmup Iteration   2: 0.336 ms/op1s]
-# Warmup Iteration   3: 0.332 ms/op3s]
-# Warmup Iteration   4: 0.340 ms/op5s]
-# Warmup Iteration   5: 0.338 ms/op7s]
-Iteration   1: 0.336 ms/opING [8m 29s]
-Iteration   2: 0.337 ms/opING [8m 31s]
-Iteration   3: 0.335 ms/opING [8m 33s]
-Iteration   4: 0.334 ms/opING [8m 35s]
-Iteration   5: 0.336 ms/opING [8m 37s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op2s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [23m 14s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [23m 16s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [23m 18s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [23m 20s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [23m 22s]
 
 > Task :performance:jmh 
 
-# Run progress: 51.11% complete, ETA 00:08:13
+# Run progress: 75.56% complete, ETA 00:07:28
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.357 ms/op
-# Warmup Iteration   2: 0.335 ms/op2s]
-# Warmup Iteration   3: 0.335 ms/op4s]
-# Warmup Iteration   4: 0.335 ms/op6s]
-# Warmup Iteration   5: 0.335 ms/op8s]
-Iteration   1: 0.336 ms/opING [8m 50s]
-Iteration   2: 0.339 ms/opING [8m 52s]
-Iteration   3: 0.334 ms/opING [8m 54s]
-Iteration   4: 0.344 ms/opING [8m 56s]
-Iteration   5: 0.333 ms/opING [8m 58s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op2s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [23m 34s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [23m 36s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [23m 38s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [23m 40s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [23m 42s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
-  0.336 ±(99.9%) 0.003 ms/op [Average]
-  (min, avg, max) = (0.333, 0.336, 0.344), stdev = 0.003
-  CI (99.9%): [0.333, 0.339] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -547,61 +1554,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
-# Parameters: (count = 1000)
+# Parameters: (size = 1000)
 
-# Run progress: 53.33% complete, ETA 00:07:48
+# Run progress: 76.67% complete, ETA 00:07:08
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 3.523 ms/op
-# Warmup Iteration   2: 3.348 ms/ops]
-# Warmup Iteration   3: 3.338 ms/ops]
-# Warmup Iteration   4: 3.339 ms/ops]
-# Warmup Iteration   5: 3.345 ms/ops]
-Iteration   1: 3.335 ms/opING [9m 10s]
-Iteration   2: 3.333 ms/opING [9m 12s]
-Iteration   3: 3.325 ms/opING [9m 14s]
-Iteration   4: 3.323 ms/opING [9m 16s]
-Iteration   5: 3.364 ms/opING [9m 18s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op2s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [23m 54s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [23m 56s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [23m 58s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [24m 0s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [24m 2s]
 
 > Task :performance:jmh 
 
-# Run progress: 55.56% complete, ETA 00:07:24
+# Run progress: 77.78% complete, ETA 00:06:47
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 3.487 ms/op
-# Warmup Iteration   2: 3.321 ms/op2s]
-# Warmup Iteration   3: 3.351 ms/op4s]
-# Warmup Iteration   4: 3.357 ms/op6s]
-# Warmup Iteration   5: 3.330 ms/op8s]
-Iteration   1: 3.358 ms/opING [9m 30s]
-Iteration   2: 3.296 ms/opING [9m 32s]
-Iteration   3: 3.324 ms/opING [9m 34s]
-Iteration   4: 3.350 ms/opING [9m 36s]
-Iteration   5: 3.352 ms/opING [9m 38s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op3s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [24m 15s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [24m 17s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [24m 19s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [24m 21s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [24m 23s]
 
 > Task :performance:jmh 
 
-# Run progress: 57.78% complete, ETA 00:07:01
+# Run progress: 78.89% complete, ETA 00:06:27
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 3.537 ms/op
-# Warmup Iteration   2: 3.365 ms/op3s]
-# Warmup Iteration   3: 3.324 ms/op5s]
-# Warmup Iteration   4: 3.348 ms/op7s]
-# Warmup Iteration   5: 3.321 ms/op9s]
-Iteration   1: 3.378 ms/opING [9m 51s]
-Iteration   2: 3.368 ms/opING [9m 53s]
-Iteration   3: 3.363 ms/opING [9m 55s]
-Iteration   4: 3.386 ms/opING [9m 57s]
-Iteration   5: 3.391 ms/opING [9m 59s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op3s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [24m 35s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [24m 37s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [24m 39s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [24m 41s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [24m 43s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
-  3.350 ±(99.9%) 0.029 ms/op [Average]
-  (min, avg, max) = (3.296, 3.350, 3.391), stdev = 0.027
-  CI (99.9%): [3.321, 3.378] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -614,61 +1619,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithAnnotation
-# Parameters: (count = 1000000)
+# Parameters: (size = 1000000)
 
-# Run progress: 60.00% complete, ETA 00:06:37
+# Run progress: 80.00% complete, ETA 00:06:06
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 4241.523 ms/op
-# Warmup Iteration   2: 3981.909 ms/op
-# Warmup Iteration   3: 3429.558 ms/op
-# Warmup Iteration   4: 3366.459 ms/op]
-# Warmup Iteration   5: 3373.452 ms/op]
-Iteration   1: 3361.641 ms/op [10m 20s]
-Iteration   2: 3338.259 ms/op [10m 23s]
-Iteration   3: 3391.167 ms/op [10m 26s]
-Iteration   4: 3409.408 ms/op [10m 30s]
-Iteration   5: 3408.522 ms/op [10m 33s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op3s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [24m 55s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [24m 57s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [24m 59s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [25m 1s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [25m 3s]
 
 > Task :performance:jmh 
 
-# Run progress: 62.22% complete, ETA 00:06:24
+# Run progress: 81.11% complete, ETA 00:05:46
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 4220.490 ms/op
-# Warmup Iteration   2: 4285.483 ms/op]
-# Warmup Iteration   3: 3704.184 ms/op]
-# Warmup Iteration   4: 3735.507 ms/op]
-# Warmup Iteration   5: 3659.036 ms/op]
-Iteration   1: 3522.149 ms/op [10m 57s]
-Iteration   2: 3426.943 ms/op [11m 0s]
-Iteration   3: 3492.360 ms/op [11m 3s]
-Iteration   4: 3959.640 ms/op [11m 7s]
-Iteration   5: 4087.340 ms/op [11m 11s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op4s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [25m 16s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [25m 18s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [25m 20s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [25m 22s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [25m 24s]
 
 > Task :performance:jmh 
 
-# Run progress: 64.44% complete, ETA 00:06:10
+# Run progress: 82.22% complete, ETA 00:05:26
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 4644.418 ms/op
-# Warmup Iteration   2: 4548.827 ms/op]
-# Warmup Iteration   3: 3602.618 ms/op]
-# Warmup Iteration   4: 3391.528 ms/op]
-# Warmup Iteration   5: 3873.553 ms/op]
-Iteration   1: 3757.509 ms/op [11m 36s]
-Iteration   2: 3349.826 ms/op [11m 39s]
-Iteration   3: 3605.832 ms/op [11m 43s]
-Iteration   4: 3549.721 ms/op [11m 46s]
-Iteration   5: 3355.559 ms/op [11m 50s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op4s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [25m 36s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [25m 38s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [25m 40s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [25m 42s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [25m 44s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
-  3534.392 ±(99.9%) 246.034 ms/op [Average]
-  (min, avg, max) = (3338.259, 3534.392, 4087.340), stdev = 230.140
-  CI (99.9%): [3288.358, 3780.426] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -681,61 +1684,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithAnnotation":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
-# Parameters: (count = 1)
+# Parameters: (size = 1)
 
-# Run progress: 66.67% complete, ETA 00:05:54
+# Run progress: 83.33% complete, ETA 00:05:05
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op56s]
-# Warmup Iteration   3: 0.003 ms/op58s]
-# Warmup Iteration   4: 0.003 ms/op0s]
-# Warmup Iteration   5: 0.003 ms/op2s]
-Iteration   1: 0.003 ms/opING [12m 4s]
-Iteration   2: 0.003 ms/opING [12m 6s]
-Iteration   3: 0.003 ms/opING [12m 8s]
-Iteration   4: 0.003 ms/opING [12m 10s]
-Iteration   5: 0.003 ms/opING [12m 12s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op4s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [25m 56s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [25m 58s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [26m 0s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [26m 2s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [26m 4s]
 
 > Task :performance:jmh 
 
-# Run progress: 68.89% complete, ETA 00:05:29
+# Run progress: 84.44% complete, ETA 00:04:45
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op16s]
-# Warmup Iteration   3: 0.003 ms/op18s]
-# Warmup Iteration   4: 0.003 ms/op20s]
-# Warmup Iteration   5: 0.003 ms/op22s]
-Iteration   1: 0.004 ms/opING [12m 24s]
-Iteration   2: 0.004 ms/opING [12m 26s]
-Iteration   3: 0.003 ms/opING [12m 28s]
-Iteration   4: 0.003 ms/opING [12m 30s]
-Iteration   5: 0.003 ms/opING [12m 32s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/ops]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op5s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [26m 17s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [26m 19s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [26m 21s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [26m 23s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [26m 25s]
 
 > Task :performance:jmh 
 
-# Run progress: 71.11% complete, ETA 00:05:04
+# Run progress: 85.56% complete, ETA 00:04:24
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.004 ms/op
-# Warmup Iteration   2: 0.003 ms/op36s]
-# Warmup Iteration   3: 0.003 ms/op38s]
-# Warmup Iteration   4: 0.003 ms/op40s]
-# Warmup Iteration   5: 0.003 ms/op42s]
-Iteration   1: 0.004 ms/opING [12m 44s]
-Iteration   2: 0.003 ms/opING [12m 46s]
-Iteration   3: 0.003 ms/opING [12m 48s]
-Iteration   4: 0.003 ms/opING [12m 50s]
-Iteration   5: 0.003 ms/opING [12m 52s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op5s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [26m 37s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [26m 39s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [26m 41s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [26m 43s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [26m 45s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
-  0.003 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.003, 0.003, 0.004), stdev = 0.001
-  CI (99.9%): [0.003, 0.004] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -748,61 +1749,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
-# Parameters: (count = 10)
+# Parameters: (size = 10)
 
-# Run progress: 73.33% complete, ETA 00:04:40
+# Run progress: 86.67% complete, ETA 00:04:04
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.035 ms/op
-# Warmup Iteration   2: 0.034 ms/op57s]
-# Warmup Iteration   3: 0.034 ms/op59s]
-# Warmup Iteration   4: 0.034 ms/op1s]
-# Warmup Iteration   5: 0.034 ms/op3s]
-Iteration   1: 0.035 ms/opING [13m 5s]
-Iteration   2: 0.037 ms/opING [13m 7s]
-Iteration   3: 0.036 ms/opING [13m 9s]
-Iteration   4: 0.035 ms/opING [13m 11s]
-Iteration   5: 0.035 ms/opING [13m 13s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op9s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op1s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op5s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [26m 57s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [26m 59s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [27m 1s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [27m 3s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [27m 5s]
 
 > Task :performance:jmh 
 
-# Run progress: 75.56% complete, ETA 00:04:15
+# Run progress: 87.78% complete, ETA 00:03:44
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.038 ms/op
-# Warmup Iteration   2: 0.034 ms/op17s]
-# Warmup Iteration   3: 0.034 ms/op19s]
-# Warmup Iteration   4: 0.034 ms/op21s]
-# Warmup Iteration   5: 0.033 ms/op23s]
-Iteration   1: 0.033 ms/opING [13m 25s]
-Iteration   2: 0.034 ms/opING [13m 27s]
-Iteration   3: 0.034 ms/opING [13m 29s]
-Iteration   4: 0.034 ms/opING [13m 31s]
-Iteration   5: 0.034 ms/opING [13m 33s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op6s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [27m 18s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [27m 20s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [27m 22s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [27m 24s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [27m 26s]
 
 > Task :performance:jmh 
 
-# Run progress: 77.78% complete, ETA 00:03:51
+# Run progress: 88.89% complete, ETA 00:03:23
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.036 ms/op
-# Warmup Iteration   2: 0.034 ms/op37s]
-# Warmup Iteration   3: 0.034 ms/op39s]
-# Warmup Iteration   4: 0.035 ms/op41s]
-# Warmup Iteration   5: 0.035 ms/op43s]
-Iteration   1: 0.034 ms/opING [13m 45s]
-Iteration   2: 0.035 ms/opING [13m 47s]
-Iteration   3: 0.034 ms/opING [13m 49s]
-Iteration   4: 0.034 ms/opING [13m 51s]
-Iteration   5: 0.034 ms/opING [13m 53s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op6s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [27m 38s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [27m 40s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [27m 42s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [27m 44s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [27m 46s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
-  0.035 ±(99.9%) 0.001 ms/op [Average]
-  (min, avg, max) = (0.033, 0.035, 0.037), stdev = 0.001
-  CI (99.9%): [0.034, 0.036] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -815,61 +1814,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
-# Parameters: (count = 100)
+# Parameters: (size = 100)
 
-# Run progress: 80.00% complete, ETA 00:03:27
+# Run progress: 90.00% complete, ETA 00:03:03
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 0.349 ms/op
-# Warmup Iteration   2: 0.334 ms/op58s]
-# Warmup Iteration   3: 0.332 ms/op0s]
-# Warmup Iteration   4: 0.337 ms/op2s]
-# Warmup Iteration   5: 0.338 ms/op4s]
-Iteration   1: 0.352 ms/opING [14m 6s]
-Iteration   2: 0.359 ms/opING [14m 8s]
-Iteration   3: 0.358 ms/opING [14m 10s]
-Iteration   4: 0.341 ms/opING [14m 12s]
-Iteration   5: 0.342 ms/opING [14m 14s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op0s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op6s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [27m 58s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [28m 0s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [28m 2s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [28m 4s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [28m 6s]
 
 > Task :performance:jmh 
 
-# Run progress: 82.22% complete, ETA 00:03:04
+# Run progress: 91.11% complete, ETA 00:02:42
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 0.368 ms/op
-# Warmup Iteration   2: 0.344 ms/op18s]
-# Warmup Iteration   3: 0.385 ms/op20s]
-# Warmup Iteration   4: 0.379 ms/op22s]
-# Warmup Iteration   5: 0.341 ms/op24s]
-Iteration   1: 0.336 ms/opING [14m 26s]
-Iteration   2: 0.335 ms/opING [14m 28s]
-Iteration   3: 0.339 ms/opING [14m 30s]
-Iteration   4: 0.337 ms/opING [14m 32s]
-Iteration   5: 0.340 ms/opING [14m 34s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op8s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [28m 20s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [28m 22s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [28m 24s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [28m 26s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [28m 28s]
 
 > Task :performance:jmh 
 
-# Run progress: 84.44% complete, ETA 00:02:40
+# Run progress: 92.22% complete, ETA 00:02:22
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 0.362 ms/op
-# Warmup Iteration   2: 0.347 ms/op38s]
-# Warmup Iteration   3: 0.334 ms/op40s]
-# Warmup Iteration   4: 0.343 ms/op42s]
-# Warmup Iteration   5: 0.334 ms/op44s]
-Iteration   1: 0.336 ms/opING [14m 46s]
-Iteration   2: 0.335 ms/opING [14m 48s]
-Iteration   3: 0.333 ms/opING [14m 50s]
-Iteration   4: 0.333 ms/opING [14m 52s]
-Iteration   5: 0.336 ms/opING [14m 54s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op8s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [28m 40s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [28m 42s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [28m 44s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [28m 46s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [28m 48s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
-  0.341 ±(99.9%) 0.009 ms/op [Average]
-  (min, avg, max) = (0.333, 0.341, 0.359), stdev = 0.009
-  CI (99.9%): [0.332, 0.350] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -882,61 +1879,59 @@ Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
-# Parameters: (count = 1000)
+# Parameters: (size = 1000)
 
-# Run progress: 86.67% complete, ETA 00:02:17
+# Run progress: 93.33% complete, ETA 00:02:02
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 3.517 ms/op
-# Warmup Iteration   2: 3.282 ms/op59s]
-# Warmup Iteration   3: 3.351 ms/op1s]
-# Warmup Iteration   4: 3.316 ms/op3s]
-# Warmup Iteration   5: 3.348 ms/op5s]
-Iteration   1: 3.399 ms/opING [15m 7s]
-Iteration   2: 3.348 ms/opING [15m 9s]
-Iteration   3: 3.305 ms/opING [15m 11s]
-Iteration   4: 3.361 ms/opING [15m 13s]
-Iteration   5: 3.418 ms/opING [15m 15s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op2s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op8s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [29m 0s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [29m 2s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [29m 4s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [29m 6s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [29m 8s]
 
 > Task :performance:jmh 
 
-# Run progress: 88.89% complete, ETA 00:01:54
+# Run progress: 94.44% complete, ETA 00:01:41
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 3.513 ms/op
-# Warmup Iteration   2: 3.288 ms/op19s]
-# Warmup Iteration   3: 3.367 ms/op21s]
-# Warmup Iteration   4: 3.527 ms/op23s]
-# Warmup Iteration   5: 3.388 ms/op25s]
-Iteration   1: 3.408 ms/opING [15m 27s]
-Iteration   2: 3.398 ms/opING [15m 29s]
-Iteration   3: 3.408 ms/opING [15m 31s]
-Iteration   4: 3.402 ms/opING [15m 33s]
-Iteration   5: 3.385 ms/opING [15m 35s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op9s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [29m 21s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [29m 23s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [29m 25s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [29m 27s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [29m 29s]
 
 > Task :performance:jmh 
 
-# Run progress: 91.11% complete, ETA 00:01:31
+# Run progress: 95.56% complete, ETA 00:01:21
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 3.723 ms/op
-# Warmup Iteration   2: 3.258 ms/op39s]
-# Warmup Iteration   3: 3.247 ms/op41s]
-# Warmup Iteration   4: 3.351 ms/op43s]
-# Warmup Iteration   5: 3.336 ms/op45s]
-Iteration   1: 3.335 ms/opING [15m 47s]
-Iteration   2: 3.226 ms/opING [15m 49s]
-Iteration   3: 3.366 ms/opING [15m 51s]
-Iteration   4: 3.317 ms/opING [15m 53s]
-Iteration   5: 3.304 ms/opING [15m 55s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op3s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op5s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op7s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op9s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [29m 41s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [29m 43s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [29m 45s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [29m 47s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [29m 49s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
-  3.359 ±(99.9%) 0.057 ms/op [Average]
-  (min, avg, max) = (3.226, 3.359, 3.418), stdev = 0.054
-  CI (99.9%): [3.301, 3.416] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
 # JMH version: 1.19
@@ -949,79 +1944,93 @@ Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
 # Threads: 1 thread, will synchronize iterations
 # Benchmark mode: Average time, time/op
 # Benchmark: org.apache.groovy.bench.ListBench.equalsWithInterface
-# Parameters: (count = 1000000)
+# Parameters: (size = 1000000)
 
-# Run progress: 93.33% complete, ETA 00:01:08
+# Run progress: 96.67% complete, ETA 00:01:01
 # Fork: 1 of 3
 
-# Warmup Iteration   1: 4355.697 ms/op
-# Warmup Iteration   2: 3711.028 ms/op
-# Warmup Iteration   3: 3721.476 ms/op
-# Warmup Iteration   4: 3675.456 ms/op
-# Warmup Iteration   5: 3744.095 ms/op]
-Iteration   1: 3643.123 ms/op [16m 17s]
-Iteration   2: 3709.695 ms/op [16m 21s]
-Iteration   3: 3876.821 ms/op [16m 24s]
-Iteration   4: 3824.281 ms/op [16m 28s]
-Iteration   5: 3657.926 ms/op [16m 32s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/ops]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [30m 2s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [30m 4s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [30m 6s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [30m 8s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [30m 10s]
 
 > Task :performance:jmh 
 
-# Run progress: 95.56% complete, ETA 00:00:46
+# Run progress: 97.78% complete, ETA 00:00:40
 # Fork: 2 of 3
 
-# Warmup Iteration   1: 4354.893 ms/op
-# Warmup Iteration   2: 4088.283 ms/op]
-# Warmup Iteration   3: 3413.897 ms/op]
-# Warmup Iteration   4: 3374.367 ms/op]
-# Warmup Iteration   5: 3395.565 ms/op]
-Iteration   1: 3413.119 ms/op [16m 55s]
-Iteration   2: 3323.144 ms/op [16m 58s]
-Iteration   3: 3363.429 ms/op [17m 1s]
-Iteration   4: 3397.227 ms/op [17m 5s]
-Iteration   5: 3457.576 ms/op [17m 8s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op0s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [30m 22s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [30m 24s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [30m 26s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [30m 28s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [30m 30s]
 
 > Task :performance:jmh 
 
-# Run progress: 97.78% complete, ETA 00:00:23
+# Run progress: 98.89% complete, ETA 00:00:20
 # Fork: 3 of 3
 
-# Warmup Iteration   1: 4205.747 ms/op
-# Warmup Iteration   2: 3980.628 ms/op]
-# Warmup Iteration   3: 3494.063 ms/op]
-# Warmup Iteration   4: 3492.136 ms/op]
-# Warmup Iteration   5: 3425.668 ms/op]
-Iteration   1: 3436.407 ms/op [17m 31s]
-Iteration   2: 3345.305 ms/op [17m 34s]
-Iteration   3: 3347.757 ms/op [17m 37s]
-Iteration   4: 3414.648 ms/op [17m 41s]
-Iteration   5: 3452.874 ms/op [17m 44s]
+# Warmup Iteration   1: ≈ 10⁻⁶ ms/op
+# Warmup Iteration   2: ≈ 10⁻⁶ ms/op4s]
+# Warmup Iteration   3: ≈ 10⁻⁶ ms/op6s]
+# Warmup Iteration   4: ≈ 10⁻⁶ ms/op8s]
+# Warmup Iteration   5: ≈ 10⁻⁶ ms/op0s]
+Iteration   1: ≈ 10⁻⁶ ms/opNG [30m 42s]
+Iteration   2: ≈ 10⁻⁶ ms/opNG [30m 44s]
+Iteration   3: ≈ 10⁻⁶ ms/opNG [30m 46s]
+Iteration   4: ≈ 10⁻⁶ ms/opNG [30m 48s]
+Iteration   5: ≈ 10⁻⁶ ms/opNG [30m 50s]
 
 > Task :performance:jmh 
 
 
 Result "org.apache.groovy.bench.ListBench.equalsWithInterface":
-  3510.889 ±(99.9%) 194.890 ms/op [Average]
-  (min, avg, max) = (3323.144, 3510.889, 3876.821), stdev = 182.301
-  CI (99.9%): [3315.999, 3705.779] (assumes normal distribution)
+  ≈ 10⁻⁶ ms/op
 
 
-# Run complete. Total time: 00:17:43
+# Run complete. Total time: 00:30:34
 
-Benchmark                       (count)  Mode  Cnt     Score     Error  Units
-ListBench.equalsDefaultGroovy         1  avgt   15     0.003 ±   0.001  ms/op
-ListBench.equalsDefaultGroovy        10  avgt   15     0.034 ±   0.001  ms/op
-ListBench.equalsDefaultGroovy       100  avgt   15     0.332 ±   0.003  ms/op
-ListBench.equalsDefaultGroovy      1000  avgt   15     3.355 ±   0.027  ms/op
-ListBench.equalsDefaultGroovy   1000000  avgt   15  3412.212 ±  36.335  ms/op
-ListBench.equalsWithAnnotation        1  avgt   15     0.004 ±   0.001  ms/op
-ListBench.equalsWithAnnotation       10  avgt   15     0.035 ±   0.001  ms/op
-ListBench.equalsWithAnnotation      100  avgt   15     0.336 ±   0.003  ms/op
-ListBench.equalsWithAnnotation     1000  avgt   15     3.350 ±   0.029  ms/op
-ListBench.equalsWithAnnotation  1000000  avgt   15  3534.392 ± 246.034  ms/op
-ListBench.equalsWithInterface         1  avgt   15     0.003 ±   0.001  ms/op
-ListBench.equalsWithInterface        10  avgt   15     0.035 ±   0.001  ms/op
-ListBench.equalsWithInterface       100  avgt   15     0.341 ±   0.009  ms/op
-ListBench.equalsWithInterface      1000  avgt   15     3.359 ±   0.057  ms/op
-ListBench.equalsWithInterface   1000000  avgt   15  3510.889 ± 194.890  ms/op
+Benchmark                        (size)   Mode  Cnt        Score        Error   Units
+ListBench.equalsDefaultGroovy         1  thrpt   15  2320508.042 ±  84277.415  ops/ms
+ListBench.equalsDefaultGroovy        10  thrpt   15  2329172.399 ±  69070.211  ops/ms
+ListBench.equalsDefaultGroovy       100  thrpt   15  2354738.681 ±  64525.890  ops/ms
+ListBench.equalsDefaultGroovy      1000  thrpt   15  2358917.549 ±  46171.873  ops/ms
+ListBench.equalsDefaultGroovy   1000000  thrpt   15  2377102.274 ±  48227.814  ops/ms
+ListBench.equalsWithAnnotation        1  thrpt   15  2213530.048 ±  93671.364  ops/ms
+ListBench.equalsWithAnnotation       10  thrpt   15  2277729.772 ±  89214.824  ops/ms
+ListBench.equalsWithAnnotation      100  thrpt   15  2256582.572 ±  85712.999  ops/ms
+ListBench.equalsWithAnnotation     1000  thrpt   15  2266409.619 ±  45408.683  ops/ms
+ListBench.equalsWithAnnotation  1000000  thrpt   15  2197481.973 ± 127202.807  ops/ms
+ListBench.equalsWithInterface         1  thrpt   15  2155416.804 ±  80496.840  ops/ms
+ListBench.equalsWithInterface        10  thrpt   15  2061873.464 ± 211658.982  ops/ms
+ListBench.equalsWithInterface       100  thrpt   15  2106467.218 ±  89659.046  ops/ms
+ListBench.equalsWithInterface      1000  thrpt   15  2219947.677 ±  87623.149  ops/ms
+ListBench.equalsWithInterface   1000000  thrpt   15  2092834.055 ± 165819.668  ops/ms
+ListBench.equalsDefaultGroovy         1   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsDefaultGroovy        10   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsDefaultGroovy       100   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsDefaultGroovy      1000   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsDefaultGroovy   1000000   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithAnnotation        1   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithAnnotation       10   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithAnnotation      100   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithAnnotation     1000   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithAnnotation  1000000   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithInterface         1   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithInterface        10   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithInterface       100   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithInterface      1000   avgt   15       ≈ 10⁻⁶                ms/op
+ListBench.equalsWithInterface   1000000   avgt   15       ≈ 10⁻⁶                ms/op
 
+Benchmark result is saved to /Users/pditommaso/projects/groovy/subprojects/performance/target/reports/jmh/results.txt
